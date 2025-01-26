@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "Codexa",
+  "permissions": [
+    "aiLanguageModelOriginTrial",
+    "sidePanel",
+    "storage",
+    "activeTab",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlhCzNbW2DBYUANEQdDORGY11lsVZWOlLDlA3HPNaKw6SZFWG7MGJjyOyEQDUWI5ILSq3uFYnCIyEdiH8ww/YgvnmZx5R3S8VM1A8Ur0SkjqklR4jIfQGeUSMeNkQrv35Y+ROJM06qtYbVZxOmWzXnGDMpTTv2GzDO4tGejdIt/uJZdzzs8fAnK9TFTe0STC255EW6akRiwwZcdwCvLABOGgF/TaDB9eSvUzi8svaWYtUP9q21EZ89rmdhaASh+/PCapKw5Fu02aE8e8ToT69HQSef/y5iSoDkdnweI4UC7S+LbxsmTVLplYDbSbznnKrEp6irKz8wSGCO2dM2gUK+wIDAQAB",
+  "trial_tokens": ["AkPKjH1fR/mP5tLO0iwGowcBAPo5wQEgpxadArdpOyy1R4FhJkoRgghnMAJCq7Q0xB66rYiKxo7m/+e6fh4QWQ0AAAB4eyJvcmlnaW4iOiJjaHJvbWUtZXh0ZW5zaW9uOi8va2ViYWlhbGRuYW1obG5tamppamFtb25kcG1tY2hua2YiLCJmZWF0dXJlIjoiQUlQcm9tcHRBUElGb3JFeHRlbnNpb24iLCJleHBpcnkiOjE3NjA0ODYzOTl9","AvilwyX/bi/MQz6wiHrvvadUMTkWWHtSqBYveKicS4wynTtNESLGVw3qeQw+juTuN/47HYKPZUExGwyzDTt+TgAAAABzeyJvcmlnaW4iOiJjaHJvbWUtZXh0ZW5zaW9uOi8va2ViYWlhbGRuYW1obG5tamppamFtb25kcG1tY2hua2YiLCJmZWF0dXJlIjoiQUlTdW1tYXJpemF0aW9uQVBJIiwiZXhwaXJ5IjoxNzUzMTQyNDAwfQ=="],  
+  "version": "1.0",
+  "description": "Medical Coder AI Assistant",  
+  "action": {
+    "default_title": "Open Codexa AI Settings"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "world": "ISOLATED"
+    }
+  ],
+  "icons": {
+    "16": "icons/codexa_icon16.png",
+    "48": "icons/codexa_icon48.png",
+    "128": "icons/codexa_icon128.png"
+  }
+} 

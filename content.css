@@ -1,0 +1,69 @@
+.codexa-form-highlight {
+    outline: 2px solid red !important;
+    outline-offset: 2px !important;
+    position: relative !important;
+    transition: background-color 0.2s ease !important;
+}
+
+.codexa-form-highlight.captured {
+    outline: 2px solid blue !important;
+}
+
+.codexa-form-highlight.capture-hover {
+    outline: 2px solid #0056b3 !important;
+    background-color: rgba(0, 86, 179, 0.15) !important;
+    box-shadow: 0 0 5px rgba(0, 86, 179, 0.3) !important;
+}
+
+.codexa-form-highlight.ignore-hover {
+    outline: 2px solid #545b62 !important;
+    background-color: rgba(84, 91, 98, 0.15) !important;
+    box-shadow: 0 0 5px rgba(84, 91, 98, 0.3) !important;
+}
+
+.codexa-form-controls {
+    position: absolute !important;
+    top: -20px !important;
+    right: 0 !important;
+    display: flex !important;
+    gap: 3px !important;
+    z-index: 10000 !important;
+}
+
+.codexa-form-button {
+    padding: 1px 6px !important;
+    border: none !important;
+    border-radius: 2px !important;
+    font-size: 10px !important;
+    cursor: pointer !important;
+    color: white !important;
+    font-family: Arial, sans-serif !important;
+    line-height: 14px !important;
+}
+
+.codexa-capture-button {
+    background-color: #007bff !important;
+}
+
+.codexa-capture-button:hover {
+    background-color: #0056b3 !important;
+}
+
+.codexa-ignore-button {
+    background-color: #6c757d !important;
+}
+
+.codexa-ignore-button:hover {
+    background-color: #545b62 !important;
+}
+
+.codexa-form-highlight::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 1000;
+} 

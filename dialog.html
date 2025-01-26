@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HCC Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dialog-content">
+        <h2>HCC Analysis</h2>
+        
+        <div class="dialog-section">
+            <label for="submitted-data">Submitted Data (PHI Redacted)</label>
+            <textarea id="submitted-data" readonly></textarea>
+        </div>
+        
+        <div class="dialog-section">
+            <div class="label-with-copy">
+                <label for="hcc-codes">HCC Codes</label>
+                <button class="copy-button" title="Copy to clipboard">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2z"/>
+                        <path d="M2 4a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-8h-2v8H2V6h8V4H2z"/>
+                    </svg>
+                </button>
+            </div>
+            <textarea id="hcc-codes" readonly></textarea>
+        </div>
+        
+        <div class="dialog-section">
+            <label for="rationale">Rationale</label>
+            <textarea id="rationale" readonly></textarea>
+        </div>
+        
+        <div class="dialog-section">
+            <label for="additional-context">Provide any additional context</label>
+            <textarea id="additional-context"></textarea>
+        </div>
+        
+        <div class="dialog-actions">
+            <button id="fetch-again" class="action-button">Fetch Again</button>
+            <button id="close-dialog" class="secondary-button">Close</button>
+        </div>
+    </div>
+    <script src="dialog.js"></script>
+</body>
+</html> 

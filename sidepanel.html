@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Codexa Settings</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="settings-container">
+        <h1>Codexa Settings</h1>
+
+        <div class="setting-group">
+            <h2>Target URL</h2>
+            <div class="url-capture">
+                <input type="text" id="target-url" readonly placeholder="No URL captured">
+                <button id="capture-url">Capture URL</button>
+            </div>
+        </div>
+
+        <div class="setting-group">
+            <div class="section-header collapsible collapsed" data-target="captured-fields-container">
+                <h2>Captured Fields</h2>
+                <div class="header-buttons">
+                    <button id="capture-fields" class="action-button">Capture Fields</button>
+                    <button class="collapse-button">&plus;</button>
+                </div>
+            </div>
+            <div id="captured-fields-container" class="collapsible-content collapsed">
+                <p class="capture-note">
+                    <i>Make sure to capture fields that contain ICD10 Codes, diagnosis fields, call notes and all information pertinent to HCC coding.</i>
+                </p>
+                <div id="captured-fields" class="captured-fields-list">
+                    <div class="no-fields">No fields captured yet</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="setting-group">
+            <div class="section-header collapsible collapsed" data-target="ignored-fields-container">
+                <h2>Ignored Fields</h2>
+                <button class="collapse-button">&plus;</button>
+            </div>
+            <div id="ignored-fields-container" class="collapsible-content collapsed">
+                <div id="ignored-fields" class="captured-fields-list">
+                    <div class="no-fields">No fields ignored</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="setting-group">
+            <button id="get-hcc-codes" class="action-button">Get HCC Codes</button>
+        </div>
+
+        <div class="setting-actions">
+            <button id="save-settings">Save Settings</button>
+            <button id="reset-defaults">Reset to Defaults</button>
+        </div>
+    </div>
+    <script src="sidepanel.js"></script>
+</body>
+</html> 
